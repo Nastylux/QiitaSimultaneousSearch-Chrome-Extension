@@ -1,0 +1,21 @@
+{
+  "name": "QiitaSimultaneousSearch",
+  "version": "0.0.1",
+  "description": "Simultaneous Search lets you search both Google and Qiita.",
+  "keywords": [
+    "chrome-extension",
+    "build"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^1.5.8",
+    "gulp": "^3.8.8",
+    "gulp-plumber": "^0.6.6",
+    "gulp-ruby-sass": "^0.7.1"
+  },
+  "author": {
+    "name": "Tomotsugu Kaneko",
+    "url": "http://bulblub.com/"
+  },
+  "license": "ISC"
+}

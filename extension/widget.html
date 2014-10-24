@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+    <meta charset="UTF-8">
+    <title>Qiita Simultaneous Search</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bower_components/mustache/mustache.js"></script>
+    <script src="simSearch.js"></script>
+    <script id="mustache-template" type="text/template">
+        <div class="qss__card">
+            {{#item}}
+            <div class="qss__title"><a href="{{url}}">{{title}}</a>
+            </div>
+            <div class="qss__layoutContainer qss__layoutContainer--split">
+                <div class="qss__passed">更新:{{updated_at_in_words}}前</div>
+                <div class="qss__count"><i class="fa fa-folder-o"></i> {{stock_count}}</div>
+            </div>
+            <div class="qss__user"><a href="http://qiita.com/{{user.url_name}}">{{user.url_name}}</a>が投稿</div>
+            <div class="qss__tags">
+                {{#tags}}
+                <div><a class="qss__tag" href="http://qiita.com/tags/{{url_name}}">{{name}}</a></div>
+                {{/tags}}
+            </div>
+            <div class="qss__body">{{raw_body}}</div>
+            {{/item}}
+        </div>
+    </script>
+    <script id="rateLimit-template" type="text/template">
+        {{remaining}}/{{limit}}
+    </script>
+</head>
+<body>
+<div id="qss" class="qss__container">
+    <div class="qss__header">
+        <div class="qss__header__title">Qiita Simultaneous Search</div>
+        <div class="qss__header__rateLimit" id="qss__header__rateLimit"></div>
+    </div>
+    <div class="qss__results" id="qss__results"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+@import "../extension/bower_components/scut/dist/_scut.scss";
+@import "../extension/bower_components/meyer-reset/stylesheets/_meyer-reset.scss";
+
+* {
+  box-sizing: border-box;
+  font-family: 'Hiragino Kaku Gothic Pro', Helvetica, sans-serif;
+}
+
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.qss {
+  @at-root {
+    &__layoutContainer {
+      display: flex;
+      &--split {
+        justify-content: space-between;
+      }
+    }
+
+    &__container {
+//      display: none;
+      width: 456px;
+      border-radius: 5px;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      background: -webkit-linear-gradient(#F1F1F1, #E9E9E9);
+      border-bottom: 1px #E2E2E2 solid;
+      box-shadow: 0 1px 0 white, 0 -1px 0 #F5F5F5;
+      height: 39px;
+      line-height: 39px;
+      padding: 0 10px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      &__title {
+        font-weight: bold;
+      }
+      &__rateLimit {
+        font-size: 10px;
+      }
+    }
+
+    &__results {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      border-top: 1px solid #ffffff;
+      background-color: #F6F6F6;
+      padding: 10px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &__card {
+      @include scut-size(136px 180px);
+      padding: 7px 10px;
+      background-color: #ffffff;
+      overflow: hidden;
+      border: 1px solid #E9E9E9;
+    }
+
+    &__title {
+      font-size: 13px;
+      line-height: 15px;
+      margin-bottom: 7px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    &__passed {
+      font-size: 10px;
+      margin-bottom: 3px;
+    }
+
+    &__count {
+      font-size: 10px;
+      margin-bottom: 3px;
+    }
+
+    &__user {
+      font-size: 10px;
+      margin-bottom: 5px;
+    }
+
+    &__body {
+      font-size: 10px;
+      line-height: 16px;
+      color: #808080;
+    }
+
+    &__tags {
+      display: flex;
+      flex-wrap: wrap;
+      text-decoration: none;
+      margin-bottom: 7px;
+    }
+
+    &__tag {
+      display: block;
+      color: #555;
+      background-color: #dfdfdf;
+      font-size: 10px;
+      height: 18px;
+      line-height: 20px;
+      padding: 0 5px;
+      margin: 2px 4px 0 0;
+      &:hover {
+        background-color: #acacac;
+      }
+    }
+  }
+}
