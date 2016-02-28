@@ -1,6 +1,6 @@
 {
   "name": "QiitaSimultaneousSearch",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simultaneous Search lets you search both Google and Qiita.",
   "keywords": [
     "chrome-extension",

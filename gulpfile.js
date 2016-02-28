@@ -17,7 +17,8 @@ gulp.task('sass', function () {
   return gulp.src('scss/**/*.scss')
     .pipe(plumber())
     .pipe(sass({
-      style: 'expanded'
+      style: 'expanded',
+      compass : true
     }))
     .pipe(gulp.dest('extension/css/'))
     .pipe(reload({stream: true}));

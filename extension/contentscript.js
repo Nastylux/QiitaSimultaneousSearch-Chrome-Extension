@@ -3,7 +3,7 @@ $(document).ready(function () {
   function qss() {
     $('#qssResults').remove();
 
-    var keyword = $('#gbqfq').val();
+    var keyword = $('#lst-ib').val();
     var encodedKeyword = encodeURI(keyword);
 
     var jqIframe = $('<iframe/>')
